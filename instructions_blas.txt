@@ -1,0 +1,9 @@
+Parmi les différentes librairies BLAS existant:
+- MKL: pas pratique dans le cadre du tp à cause des licences.
+- ATLAS: ne permet pas de modifier le nombre de thread à l'exécution
+- OpenBLAS (fork de GotoBLAS): librairie BLAS retenue.
+
+Pour utiliser OpenBLAS, vous devez cloner le dépôt git (https://github.com/xianyi/OpenBLAS) et compiler la librairie. Une fois la librairie BLAS compilée, vous pouvez compiler matmul_blas.c avec la commande suivante:
+gcc -Wall  -I/PATH/VERS/LE/DEPOT/GIT/xianyi-OpenBLAS-9c51cdf -o $@ $< /PATH/VERS/LE/DEPOT/GIT/xianyi-OpenBLAS-9c51cdf/libopenblas.a -lpthread
+
+En cas de questions: cgageat@aneo.fr
